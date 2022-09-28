@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubairro Bakery</title>
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/Home.css">
+    <script src="home.js"></script>
+    
+</head>
+<body>
+  <header>
+       
+        <div class="topo">
+          <img src="imagens/logo1.png" alt="">
+        </div>
+        <nav class="nav">
+          <input type="checkbox" id="checkbox" class="checkbox">
+          <label for="checkbox" class="label-menu">menu <span class="hamburger"></span></label>
+          <ul class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Produto.html">Produtos</a></li>
+            <li><a href="Formulario.html">Contato</a></li>
+            <li><a href="Sobre.html">Sobre</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+            <li></li>
+           </ul>
+       </nav>
+    </header>
+
+   <br><br>
+
+
+    <div id="main">
+            <div class="content">
+                <div class="slides">
+                  <input type="radio" name="slide" id="slide1" checked>
+                  <input type="radio" name="slide" id="slide2">
+                  <input type="radio" name="slide" id="slide3">
+                  <input type="radio" name="slide" id="slide4">
+                  <input type="radio" name="slide" id="slide5">
+                  <input type="radio" name="slide" id="slide6">
+                  <input type="radio" name="slide" id="slide7">
+
+                    <div class="slide s1">
+                     <img src="imagens/fotofundo.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                     <img src="imagens/sex1.jfif" alt="">
+                    </div>
+                    <div class="slide">
+                     <img src="imagens/perso10.jfif" alt="">
+                    </div>
+            
+                    <div class="slide">
+                      <img src="imagens/perso7.jfif" alt="">
+                    </div>
+                    <div class="slide">
+                     <img src="imagens/qua2.jfif" alt="">
+                    </div>
+                    <div class="slide">
+                      <img src="imagens/perso17.jfif" alt="">
+                    </div>
+                    <div class="slide">
+                      <img src="imagens/seg2.jpeg" alt="">
+                    </div>
+
+                    <div class="navigation">
+                      <label class="bar" for="slide1"></label>
+                      <label class="bar" for="slide2"></label>
+                      <label class="bar" for="slide3"></label>
+                      <label class="bar" for="slide4"></label>
+                     <label class="bar" for="slide5"></label>
+                     <label class="bar" for="slide6"></label>
+                     <label class="bar" for="slide7"></label>
+    
+                    </div>
+                </div>
+
+        
+            </div>
+            
+<main>
+        <div id="home">
+
+            <div>
+                
+            </div>
+
+        </div>
+
+        <br><br><br><br><br>
+
+        <div id="ofertas">
+         <h2 id="mensagem">&#8606 Ofertas do dia! &#8608</h2>
+           <div>
+             <img id="img1" src="imagens/ter2.jfif" alt="item1">
+             <img id="img2" src="imagens/ter1.jpeg" alt="item2">
+             <img id="img3" src="imagens/sex4.jfif" alt="item3">
+             <img id="img4" src="imagens/ter3.jfif" alt="item4">
+             <img id="img5" src="imagens/seg1.jfif" alt="item1">
+             <img id="img6" src="imagens/seg3.jpeg" alt="item2">
+             <img id="img7" src="imagens/sab4.jfif" alt="item3">
+             <img id="img8" src="imagens/qui4.jfif" alt="item4">
+             <img id="img9" src="imagens/qui3.jfif" alt="item3">
+             <img id="img10" src="imagens/sab2.jfif" alt="item4">
+             <img id="img11" src="imagens/qui2.jfif" alt="item3">
+             <img id="img12" src="imagens/qua1.jpeg" alt="item4">
+             
+            </div>
+           
+        </div>
+        
+
+
+
+    <div id="feedback">
+        <h2> &#8606 Clique para ver alguns depoimentos! &#8608</h2> 
+        <img src="imagens/bolo 3.jpg" alt=""><img src="imagens/bolo 3.jpg" alt=""><img src="imagens/bolo 3.jpg" alt=""><img src="imagens/bolo 3.jpg" alt="">
+        <H1><a href="Feedback.html">Ver Mais</a></H1> <br>
+    </div>
+</main>
+
+<footer id="footer">
+
+    <div><h4 class="endereço">Rua Carlos Seidi, 813 Caju - Rj</h4></div>
+    
+    <div class="socials">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="imagens/Facebook.png" alt="Facebook">
+        </a>
+        
+        <a href="https://instagram.com/dubairrobakery?igshid=NzNkNDdiOGI=" target="_blank" rel="noopener noreferrer">
+            <img src="imagens/Instagram.png" alt="Instagram">
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="imagens/email.png" alt="E-mail">
+        </a>
+
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="imagens/whatsapp.png" alt="whatsapp">
+        </a>
+    </div>
+
+    <div><h4 class="direitos">Todos os direitos reservados &copy</h4></div>
+
+        
+    </div>
+</footer>
+</body>
+</html>
+
+<script>
+var img = document.getElementById('img')
+var mensagem = document.getElementById('mensagem')
+var hoje = new Date()
+var diasemana = hoje.getDay()
+
+switch(diasemana){
+   case 0:
+   console.log('domingo')
+   mensagem.innerHTML = `&#8606Hoje não temos ofertas!&#8608`
+   break
+
+   case 1:
+   console.log('segunda')
+   img1.src = 'imagens/seg1.jfif'
+   img2.src = 'imagens/seg2.jpeg'
+   img3.src = 'imagens/seg3.jpeg'
+   img4.src = 'imagens/seg4.jfif'
+   img5.src = 'imagens/qua1.jpeg'
+   img6.src = 'imagens/qua2.jfif'
+   img7.src = 'imagens/qua3.jfif'
+   img8.src = 'imagens/qua4.jfif'
+   img9.src = 'imagens/sex1.jfif'
+   img10.src = 'imagens/sex2.jfif'
+   
+   break
+
+   case 2:
+   console.log('terça')
+   img1.src = 'imagens/ter1.jpeg'
+   img2.src = 'imagens/ter2.jfif'
+   img3.src = 'imagens/ter3.jfif'
+   img4.src = 'imagens/ter4.jfif'
+   img5.src = 'imagens/qui1.png'
+   img6.src = 'imagens/qui2.jfif'
+   img7.src = 'imagens/qui3.jfif'
+   img8.src = 'imagens/qui4.jfif'
+   img9.src = 'imagens/sab1.jfif'
+   img10.src = 'imagens/sab2.jfif'
+
+   break
+
+   case 3:
+   console.log('quarta')
+   img1.src = 'imagens/seg1.jfif'
+   img2.src = 'imagens/seg2.jpeg'
+   img3.src = 'imagens/seg3.jpeg'
+   img4.src = 'imagens/seg4.jfif'
+   img5.src = 'imagens/qua1.jpeg'
+   img6.src = 'imagens/qua2.jfif'
+   img7.src = 'imagens/qua3.jfif'
+   img8.src = 'imagens/qua4.jfif'
+   img9.src = 'imagens/sex1.jfif'
+   img10.src = 'imagens/sex2.jfif'
+
+   break
+
+   case 4:
+   console.log('quinta')
+   img1.src = 'imagens/ter1.jpeg'
+   img2.src = 'imagens/ter2.jfif'
+   img3.src = 'imagens/ter3.jfif'
+   img4.src = 'imagens/ter4.jfif'
+   img5.src = 'imagens/qui1.png'
+   img6.src = 'imagens/qui2.jfif'
+   img7.src = 'imagens/qui3.jfif'
+   img8.src = 'imagens/qui4.jfif'
+   img9.src = 'imagens/sab1.jfif'
+   img10.src = 'imagens/sab2.jfif'
+   break
+
+   case 5:
+   console.log('sexta')
+   img1.src = 'imagens/seg1.jfif'
+   img2.src = 'imagens/seg2.jpeg'
+   img3.src = 'imagens/seg3.jpeg'
+   img4.src = 'imagens/seg4.jfif'
+   img5.src = 'imagens/qua1.jpeg'
+   img6.src = 'imagens/qua2.jfif'
+   img7.src = 'imagens/qua3.jfif'
+   img8.src = 'imagens/qua4.jfif'
+   img9.src = 'imagens/sex1.jfif'
+   img10.src = 'imagens/sex2.jfif'
+   break
+   
+   case 6:
+   console.log('sabado')
+   img1.src = 'imagens/ter1.jpeg'
+   img2.src = 'imagens/ter2.jfif'
+   img3.src = 'imagens/ter3.jfif'
+   img4.src = 'imagens/ter4.jfif'
+   img5.src = 'imagens/qui1.png'
+   img6.src = 'imagens/qui2.jfif'
+   img7.src = 'imagens/qui3.jfif'
+   img8.src = 'imagens/qui4.jfif'
+   img9.src = 'imagens/sab1.jfif'
+   img10.src = 'imagens/sab2.jfif'
+   break
+   
+   }
+
+
+   console.log=(diasemana)
+</script>

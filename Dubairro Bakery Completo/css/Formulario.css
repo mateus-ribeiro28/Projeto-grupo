@@ -1,0 +1,473 @@
+
+
+:root{
+    --royal-blue-dark: #3F2623;
+    --royal-blue-light: #F2798F;  
+    --white: #F2798F;
+    --black: rgb(255, 255, 255);
+    --background: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--background);
+
+
+}
+
+
+header .topo img{
+    background: var( --royal-blue-dark);
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    margin-top: 0px;
+    
+}
+
+
+
+
+header nav a{
+    color: var(--black);
+    text-decoration: none;
+   
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    background: var(--royal-blue-dark);
+    height: 4.3875rem;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    margin-top: 160px;
+    
+}
+
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menu a{
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.3em;
+    
+   
+   
+    
+}
+
+.menu a:hover{
+    background: var(--royal-blue-light);
+}
+
+.label-menu, .checkbox{
+    display: none;
+}
+
+
+@media (max-width: 600px){
+    .menu{
+        display: block;
+        position: absolute;
+        top: 3.2875rem;
+        left: 0;
+        background: var(--royal-blue-dark);
+        text-align: center;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        transition: 0.5s;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin-inline: 1rem;
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+        border-radius: 0;
+        
+    }
+
+    .label-menu{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--white);
+        padding-block: 1rem;
+        cursor: pointer;
+    }
+    .hamburger{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+    }
+    .hamburger::before, .hamburger::after{
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+    .checkbox:checked ~ .menu{
+        
+        height: calc(100vh - 4.6875rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .checkbox:checked ~ .label-menu .hamburger {
+        border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburger::before{
+        transform: rotate(135deg);
+    }
+    .checkbox:checked ~ .label-menu .hamburger {
+        border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburger::after{
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
+
+
+
+    header .topo img{
+        background: var( --royal-blue-dark);
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: fixed;
+        margin-top: 0px;
+        
+    }
+    
+    header nav{
+        display: flex;
+        align-items: center;
+        background: var(--royal-blue-dark);
+        height: 4.3875rem;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        margin-top: 100px;
+        
+    }
+
+    footer .endereço{
+        color: white;
+        padding: 50px 0 0 0;
+    }
+    
+    footer .direitos{
+        color:white;
+        padding: 50px 0 0 0;
+    
+    }
+    
+
+}
+
+
+#formulario{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: 180px;
+}
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px ;
+    
+}
+
+.form-imagem{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px ;
+}
+
+.form-imagem img{
+    width: 35rem;
+    
+    
+}
+/* fundo do formulario */
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #df89a6;
+    padding: 3rem;
+    
+}
+
+
+.form-header{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+/* grupo dos input */
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: -1rem;
+}
+/*fundo*/
+.input-box{
+    
+    color: white
+}
+.input-box input{
+    box-shadow: 1px 4px #bb5d7c;
+}
+
+/* botão*/
+.formulario-button{
+    text-align: center;
+    width: 30%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #bb5d7c;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.formulario-button:hover{
+
+    background-color: #9e2a53;
+  
+}
+
+footer{
+    margin: 0px;
+    padding: 50px 30px;
+    width: 100%;
+    height: 20%;
+    text-decoration: none;
+    background-color: #3F2623;
+    display: flex;
+    justify-content: space-around;
+
+}
+footer a{
+    display: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #F2798F;
+   
+}
+.socials{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.socials a{
+    display: inline-flex;
+    width: 20px;
+    height: 50px;
+    background: #F2798F ;
+    color: #87204B;
+    margin: 0px 6px;
+    margin-top: 40px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 20px;
+
+}
+
+.socials a:hover{
+    background: #87204B;
+}
+
+.socials a i{
+    transition: 00.4s all;
+}
+
+.socials a:hover > i{
+    transform: scale(1.6) rotate(25deg);
+}
+
+footer .endereço{
+    color: white;
+}
+
+footer .direitos{
+    color:white;
+   
+
+}
+
+#pedido a{
+    line-height: 50px;
+    margin-left: 5px;
+    color: wheat;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}   
+
+
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@200;400;600 & family= Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300; 1.400 & display=trocar');
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:"trebuchet MS,"Arial, Helvetica, sans-serif;;
+}
+
+
+/* responsive do formulario */
+@media screen and (max-width: 1250px) {
+    .form-imagem{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+      
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    .container{
+        width: auto;
+        height: auto;
+    }
+    .formulario-button{
+        margin-top: 1rem;
+    }
+    
+    }
+    .input-group{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    @media screen and (max-width: 600px){
+        .container{
+            width: auto;
+            height: auto;
+        }
+        .input-group{
+            flex-direction: column;
+            flex-wrap: nowrap;}
+        .form{
+            width: auto;
+          
+        }
+    }
+    
+
+
+
+
+
+
+/* responsive do menu 
+
+@media (max-width: 600px){
+    .menu{
+        display: block;
+        position: absolute;
+        top: 3.2875rem;
+        left: 0;
+        background: var(--royal-blue-dark);
+        text-align: center;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        transition: 0.5s;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin-inline: 1rem;
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+        border-radius: 0;
+        
+    }
+
+    .label-menu{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--white);
+        padding-block: 1rem;
+        cursor: pointer;
+    }
+    .hamburger{
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+    }
+    .hamburger::before, .hamburger::after{
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+    .checkbox:checked ~ .menu{
+        
+        height: calc(100vh - 4.6875rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .checkbox:checked ~ .label-menu .hamburger {
+        border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburger::before{
+        transform: rotate(135deg);
+    }
+    .checkbox:checked ~ .label-menu .hamburger {
+        border-top-color: transparent;
+    }
+    .checkbox:checked ~ .label-menu .hamburger::after{
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }*/
